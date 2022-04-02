@@ -1,0 +1,19 @@
+<%- include('header'); -%>
+
+    <div class="box" id="heading" >
+        <h1 style="color: black;"><%= daynum %> </h1>
+    </div>
+    <div class="box">
+            <% for(var i=0;i<newitem.length;i++){ %>
+                <div class="item">
+                    <input type="checkbox">
+                   <p><%= newitem[i] %></p>
+                </div>
+                <% } %>
+                <form action="/" method="post" class="item">
+                    <!-- <label for="item">Enter Item in list</label> -->
+                    <input type="text" name="added" style="color: black;" placeholder="Add New Item" autocomplete="off">
+                    <button style="text-align: center;align-items: center;" type="submit" name="list" value=<%= daynum %>>+</button>
+                </form>
+                </div>
+                <%- include('footer'); -%>
